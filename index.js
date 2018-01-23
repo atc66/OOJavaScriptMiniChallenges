@@ -56,6 +56,9 @@
 // Make sure to write code afterwards that creates instances of these objects to make sure that what 
 // you've written works well and you're able to store the necessary data in each object.
 
+var d = new Date ();
+var n = d.getFullYear();
+
 class Person {
 	constructor (name, age, location){
 		this.name = name;
@@ -68,6 +71,9 @@ class Student extends Person {
 	constructor(name, age, location, grade){
 		super(name, age, location)
 		this.grade = grade
+		this.yearBorn = function(){
+			return n-this.age;
+		}
 	}
 }
 
@@ -75,15 +81,23 @@ class Teacher extends Person {
 	constructor(name, age, location, subject){
 		super(name, age, location)
 		this.subjet = subject
+		this.yearBorn = function(){
+			return n-this.age;
+		}
 	}
 }
 
 class School {
-	constructor (name){
-		super(name)
+	constructor (name, yearBuilt){
+		this.name = name
+		this.yearBuilt = yearBuilt
+		this.age = function(){
+			return n-this.yearBuilt;
+		}
+		
 	}
-}
+}	
 
 var student1 = new Student('Peter Parker', 15, 'Queens, NY', 'Sophmore')
 var teacher1 = new Teacher('George Feeny', 60, 'Philadelphia, PA', 'History' )
-var school1 = new School('Rock and Roll High School')
+var school1 = new School('Rock and Roll High School', 1955)
