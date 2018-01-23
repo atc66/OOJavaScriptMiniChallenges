@@ -85,9 +85,6 @@ class Teacher extends Person {
 	}
 }
 
-// class School {
-// 	constructor(name)
-// }
 function School (name){
 	this.name = name
 	this.teachers = []
