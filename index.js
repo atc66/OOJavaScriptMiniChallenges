@@ -5,18 +5,18 @@
 // last answer returned from multiply.
 
 
-function Multiplier(){
-	this.supplied = 1;
-	this.multiply = function(x){
-		this.x = x
-		return this.supplied = x*this.supplied;
-	}
-	this.getCurrentValue = function () {
-		console.log(this.supplied);
-	}
-};
+// function Multiplier(){
+// 	this.supplied = 1;
+// 	this.multiply = function(x){
+// 		this.x = x
+// 		return this.supplied = x*this.supplied;
+// 	}
+// 	this.getCurrentValue = function () {
+// 		console.log(this.supplied);
+// 	}
+// };
 
-var z = new Multiplier();
+// var z = new Multiplier();
 
 // Exercise 2
 
@@ -60,7 +60,7 @@ class Person {
 	constructor (name, age, location){
 		this.name = name;
 		this.age = age;
-		this.location;
+		this.location = location;
 	}
 }
 
@@ -78,5 +78,12 @@ class Teacher extends Person {
 	}
 }
 
+class School {
+	constructor (name){
+		super(name)
+	}
+}
+
 var student1 = new Student('Peter Parker', 15, 'Queens, NY', 'Sophmore')
 var teacher1 = new Teacher('George Feeny', 60, 'Philadelphia, PA', 'History' )
+var school1 = new School('Rock and Roll High School')
