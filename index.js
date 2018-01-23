@@ -71,9 +71,8 @@ class Student extends Person {
 	constructor(name, age, location, grade){
 		super(name, age, location)
 		this.grade = grade
-		this.yearBorn = function(){
-			return n-this.age;
-		}
+		} yearBorn(){
+			return n-(this.age)
 	}
 }
 
@@ -81,12 +80,14 @@ class Teacher extends Person {
 	constructor(name, age, location, subject){
 		super(name, age, location)
 		this.subjet = subject
-		this.yearBorn = function(){
-			return n-this.age;
-		}
+		} yearBorn(){
+			return n-(this.age);
 	}
 }
 
+// class School {
+// 	constructor(name)
+// }
 function School (name){
 	this.name = name
 	this.teachers = []
@@ -100,18 +101,6 @@ function School (name){
 		console.log('A new student enrolled in Rock and Roll High School')
 	}
 }
-// extends Person{
-// 	constructor (name, yearBuilt){
-// 		super(name) 
-// 		this.yearBuilt = yearBuilt
-// 		this.age = function(){
-// 			return n-(this.yearBuilt);
-// 		}
-// 		this.newStudent = function(){
-// 			return Student;
-// 		}
-// 	}
-// }	
 
 var student1 = new Student('Peter Parker', 15, 'Queens, NY', 'Sophmore')
 var student2 = new Student('Andrew Ciukurescu', 29, 'Philadelphia, PA', 'Post Grad')
