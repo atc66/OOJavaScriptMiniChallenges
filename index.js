@@ -87,17 +87,34 @@ class Teacher extends Person {
 	}
 }
 
-class School {
-	constructor (name, yearBuilt){
-		this.name = name
-		this.yearBuilt = yearBuilt
-		this.age = function(){
-			return n-this.yearBuilt;
-		}
-		
+function School (name){
+	this.name = name
+	this.teachers = []
+	this.students = []
+	this.addTeacher = function(x){
+		this.teachers.push(x)
+		console.log('A new teacher was hired at Rock and Roll High School')
 	}
-}	
+	this.addStudent = function(x){
+		this.students.push(x)
+		console.log('A new student enrolled in Rock and Roll High School')
+	}
+}
+// extends Person{
+// 	constructor (name, yearBuilt){
+// 		super(name) 
+// 		this.yearBuilt = yearBuilt
+// 		this.age = function(){
+// 			return n-(this.yearBuilt);
+// 		}
+// 		this.newStudent = function(){
+// 			return Student;
+// 		}
+// 	}
+// }	
 
 var student1 = new Student('Peter Parker', 15, 'Queens, NY', 'Sophmore')
-var teacher1 = new Teacher('George Feeny', 60, 'Philadelphia, PA', 'History' )
-var school1 = new School('Rock and Roll High School', 1955)
+var student2 = new Student('Andrew Ciukurescu', 29, 'Philadelphia, PA', 'Post Grad')
+var teacher1 = new Teacher('George Feeny', 60, 'Philadelphia, PA', 'History')
+var teacher2 = new Teacher('Dimitri Islam', 23, 'Buffalo, NY', 'History')
+var school1 = new School('Rock and Roll High School')
